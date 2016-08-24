@@ -4,33 +4,23 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-slides initialSlide="3" [options]="{pager: false}">
-    <ion-slide *ngFor="let phone of phones">
-      <ion-card>
+<ion-content padding>
+  <ion-card (swipe)="swipeEvent($event)">
+    <div *ngIf="selectedItem.image.length>0" class="ImgDim"><img src="{{selectedItem.image}}" /></div>
+    <div class="noImgTestDetail" *ngIf="!selectedItem.image.length>0">
+      <p>Pas d'image</p>
+    </div>
+    <ion-card-content>
+      <ion-card-title>
+        {{selectedItem.modele}}
+      </ion-card-title>
+      <p><span class="label">OS : </span>{{selectedItem.os}}</p>
+      <p><span class="label">Version : </span>{{selectedItem.version}}</p>
+      <p><span class="label">Sim : </span>{{selectedItem.sim ? 'Insérée' : 'Non insérée'}}</p>
+    </ion-card-content>
+  </ion-card>
 
-        <div *ngIf="phone.image" class="ImgDim"><img src="{{phone.image}}" /></div>
-        <div class="noImgTestDetail" *ngIf="!phone.image">
-          <p>Pas d'image</p>
-        </div>
-
-        <ion-card-content>
-          <ion-card-title>
-            {{phone.modele}}
-          </ion-card-title>
-          <p><span class="label">OS : </span> {{phone.os}}</p>
-          <p><span class="label">Version : </span> {{phone.version}}</p>
-          <p><span class="label">Sim : </span>{{phone.sim ? 'insérée' : 'Non insérée'}}</p>
-        </ion-card-content>
-
-
-      </ion-card>
-      <p>
-        <center>{{phones.indexOf(phone)+1}}/{{phones.length}}</center>
-      </p>
-
-    </ion-slide>
-  </ion-slides>
+  <p>
+    <center>{{index+1}}/{{phones.length}}</center>
+  </p>
 </ion-content>
-
-<!--(swipe)="swipeEvent($event)" id="cardAnimate"-->
