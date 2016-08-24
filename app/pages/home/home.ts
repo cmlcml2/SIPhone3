@@ -64,7 +64,7 @@ export class HomePage {
         "proxy" : "pac.proxy.js"
       },
       {
-        "modele": "Samsung Galaxy S4",
+        "modele": "Huwai Ascend G620S",
         "type": "téléphone",
         "os": "android",
         "version": "6.1",
