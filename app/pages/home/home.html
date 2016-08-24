@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Téléphones</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of phones" (click)="itemTapped(phones.indexOf(item),phones)">
+     
+      <ion-item>
+        <ion-thumbnail item-left>
+        <img *ngIf="item.image.length>0" src="{{item.image}}">
+        <div class="noImgTest" *ngIf="!item.image.length>0"><p>Pas d'image</p></div>
+        </ion-thumbnail>
+        <h2>{{item.modele}}</h2>
+        <p>{{item.version}}</p>
+        <p>{{item.num}}</p>
+        <div item-right *ngIf="item.sim">
+          <ion-icon name="md-document"></ion-icon>
+        </div>
+        <div item-right *ngIf="!item.sim">
+          <ion-icon name="md-remove"></ion-icon>
+        </div>
+      </ion-item>
+
+      <ion-item-options side="left">
+        <button><icon trash></icon> Modifier</button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

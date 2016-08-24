@@ -1,0 +1,29 @@
+
+ .noImg{
+
+     transform: rotate(320deg);
+     font-style:italic;
+ }
+
+.noImgTest{
+    background-image : url("http://www.ecyseo.net/data/images/site/1379858221_04.png");
+    width: 80px;
+    height: 80px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+
+    p{
+        transform: rotate(-40deg);
+        position:relative;
+        top:30px; 
+        font-weight:  bold;
+        color:rgba(red, 0.7);
+    }
+}
+
+
+
+
+        // font-size: 10vw;
+        // margin-top:25vw;
+        // margin-right:5vw;
