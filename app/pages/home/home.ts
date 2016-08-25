@@ -62,7 +62,7 @@ export class HomePage {
         "ip" : "127.0.0.1",
         "dsn" : "10.1.1.2",
         "proxy" : "pac.proxy.js"
-      },
+                                                                                                         },
       {
         "modele": "Huwai Ascend G620S",
         "type": "téléphone",
