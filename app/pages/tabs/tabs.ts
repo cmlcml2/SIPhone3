@@ -20,14 +20,10 @@ export class TabsPage {
   tab1Root: any ;
   tab2Root: any ;
 
-
-
   constructor() {
     this.tab0Root = HomePage;
     this.tab1Root = DetailphonePage;
     this.tab2Root = DetailreseauPage;
-    console.log('yo');
-
   }
 
 }

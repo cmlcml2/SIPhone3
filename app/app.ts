@@ -28,9 +28,8 @@ import {TabsPage} from './pages/tabs/tabs';
       { title: 'Ajouter Smartphone', component: AddphonePage },
       { title: 'À propos', component: AproposPage },
       { title: 'Détail réseau', component: DetailreseauPage },
-      { title: 'tabs', component: TabsPage },
     ];
-
+      this.rootPage = TabsPage;
   }
 
   initializeApp() {

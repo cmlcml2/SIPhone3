@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams, Platform, ToastController} from 'ionic-angular';
-
 import {DetailphonePage} from '../detailphone/detailphone';
 
 
@@ -8,12 +7,11 @@ import {DetailphonePage} from '../detailphone/detailphone';
 @Component({
   templateUrl: 'build/pages/home/home.html'
 })
+
 export class HomePage {
   phones: Array<any>;
 
   constructor(public navCtrl: NavController) {
-
-
     this.phones = [
       {
         "modele": "iPhone 4S",
@@ -25,7 +23,7 @@ export class HomePage {
         "sim" : false,
         "ip" : "127.0.0.1",
         "dsn" : "10.1.1.2",
-        "proxy" : "pac.proxy.js"
+        "proxy" : "proxy.pac.js"
       },
       {
         "modele": "iPad mini",
@@ -37,7 +35,7 @@ export class HomePage {
         "sim" : true,
         "ip" : "127.0.0.1",
         "dsn" : "10.1.1.2",
-        "proxy" : "pac.proxy.js"
+        "proxy" : "proxy.pac.js"
       },
       {
         "modele": "Nokia Lumia 1020",
@@ -49,7 +47,7 @@ export class HomePage {
         "sim" : false,
         "ip" : "127.0.0.1",
         "dsn" : "10.1.1.2",
-        "proxy" : "pac.proxy.js"
+        "proxy" : "proxy.pac.js"
       },
       {
         "modele": "Nexus 9",
@@ -61,8 +59,8 @@ export class HomePage {
         "sim" : false,
         "ip" : "127.0.0.1",
         "dsn" : "10.1.1.2",
-        "proxy" : "pac.proxy.js"
-                                                                                                         },
+        "proxy" : "proxy.pac.js"
+      },
       {
         "modele": "Huwai Ascend G620S",
         "type": "téléphone",
@@ -77,11 +75,9 @@ export class HomePage {
       },
 
     ];
-
           console.log('Images',this.phones[4].image)
    
   }
-
   // Navigation sur la page des détailss
   private itemTapped(index,phones): void {
     this.navCtrl.push(DetailphonePage, {
@@ -89,7 +85,6 @@ export class HomePage {
       "phones" : phones
     });
   }
-
 }
 
 
