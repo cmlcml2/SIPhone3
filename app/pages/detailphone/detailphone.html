@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Detail Smartphone</ion-title>
+    <ion-title>Details Smartphone</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -14,13 +14,57 @@
       <ion-card-title>
         {{selectedItem.modele}}
       </ion-card-title>
-      <p><span class="label">OS : </span>{{selectedItem.os}}</p>
-      <p><span class="label">Version : </span>{{selectedItem.version}}</p>
-      <p><span class="label">Sim : </span>{{selectedItem.sim ? 'Insérée' : 'Non insérée'}}</p>
+
+      <div [ngSwitch]="type">
+        <div *ngSwitchCase="'detail'">
+          <p><span class="label">OS : </span>{{selectedItem.os}}</p>
+          <p><span class="label">Version : </span>{{selectedItem.version}}</p>
+          <p><span class="label">Sim : </span>{{selectedItem.sim ? 'Insérée' : 'Non insérée'}}</p>
+        </div>
+
+        <div *ngSwitchCase="'reseau'">
+          <p><span class="label">Ip : </span>{{selectedItem.ip}}</p>
+          <p><span class="label">DNS : </span>{{selectedItem.dns}}</p>
+          <p><span class="label">Proxy : </span>{{selectedItem.proxy}}</p>
+        </div>
+      </div>
+
     </ion-card-content>
   </ion-card>
 
   <p>
     <center>{{index+1}}/{{phones.length}}</center>
   </p>
+
+  <ion-footer style="bottom: 0px;">
+
+    <ion-toolbar class="toolbar" no-border-bottom="" no-border-top="">
+
+      <div class="toolbar-content">
+
+        <ion-segment  [(ngModel)]="type" ng-reflect-model="sunny">
+          <ion-segment-button 
+          class="segment-button segment-activated" 
+          role="button" 
+          tappable="" 
+          value="detail"
+          aria-pressed="true">
+            Info générales
+            <ion-button-effect></ion-button-effect>
+          </ion-segment-button>
+          <ion-segment-button 
+          checked="" 
+          class="segment-button" 
+          role="button" 
+          tappable=""
+          value="reseau"  
+          aria-pressed="false">
+            Info réseau
+            <ion-button-effect></ion-button-effect>
+          </ion-segment-button>
+        </ion-segment>
+
+      </div>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>

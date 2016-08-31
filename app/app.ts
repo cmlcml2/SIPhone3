@@ -5,8 +5,7 @@ import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 import {AproposPage} from './pages/apropos/apropos';
 import {AddphonePage} from './pages/addphone/addphone';
-import {DetailreseauPage} from './pages/detailreseau/detailreseau';
-import {TabsPage} from './pages/tabs/tabs';
+
 
 @Component({
   templateUrl: 'build/app.html'
@@ -27,9 +26,7 @@ import {TabsPage} from './pages/tabs/tabs';
       { title: 'Accueil', component: HomePage },
       { title: 'Ajouter Smartphone', component: AddphonePage },
       { title: 'À propos', component: AproposPage },
-      { title: 'Détail réseau', component: DetailreseauPage },
     ];
-      this.rootPage = TabsPage;
   }
 
   initializeApp() {

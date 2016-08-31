@@ -14,6 +14,7 @@ export class DetailphonePage {
   selectedItem: any;
   index : any;
   phones : Array<any>;
+  type : string='detail';
 
   constructor(private navCtrl: NavController, navParams: NavParams ,private alertController: AlertController) {
     this.index = navParams.get('index');
@@ -33,4 +34,6 @@ private swipeEvent($event): void {
             this.selectedItem  = this.phones[this.index];   
     }
   }
+
+
 }

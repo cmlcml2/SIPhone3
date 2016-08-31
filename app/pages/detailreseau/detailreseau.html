@@ -15,4 +15,46 @@
 
 <ion-content padding>
 
+  <p>Coucou :)</p>
+  <ion-footer style="bottom: 0px;">
+
+    <ion-toolbar class="toolbar" no-border-bottom="" no-border-top="">
+
+
+
+
+      <div class="toolbar-content">
+
+        <ion-segment color="danger" ng-reflect-model="sunny" class="segment-danger ng-untouched ng-valid ng-dirty" ng-reflect-color="danger">
+          <ion-segment-button 
+          checked="" 
+          class="segment-button" 
+          role="button" 
+          tappable="" 
+          value="rainy" 
+          ng-reflect-value="rainy" 
+          aria-pressed="false">
+            Detail
+
+            <ion-button-effect></ion-button-effect>
+          </ion-segment-button>
+          <ion-segment-button 
+          (click)="itemTapped(phones.indexOf(item),phones)" 
+          class="segment-button segment-activated" 
+          role="button" 
+          tappable="" 
+          value="sunny" 
+          ng-reflect-value="sunny"
+          aria-pressed="true">
+
+            Detail réseau
+
+            <ion-button-effect></ion-button-effect>
+          </ion-segment-button>
+        </ion-segment>
+
+      </div>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>
+

@@ -22,7 +22,7 @@ export class HomePage {
         "image": "https://images-na.ssl-images-amazon.com/images/I/61-k8S3VoiL._SX522_.jpg",
         "sim" : false,
         "ip" : "127.0.0.1",
-        "dsn" : "10.1.1.2",
+        "dns" : "10.1.1.2",
         "proxy" : "proxy.pac.js"
       },
       {
@@ -34,7 +34,7 @@ export class HomePage {
         "image": "https://i5.walmartimages.com/asr/28baa67f-7a5a-48d1-a0fc-6d5305924039_1.ebdff582719ea3a94a302c79e6213250.jpeg",
         "sim" : true,
         "ip" : "127.0.0.1",
-        "dsn" : "10.1.1.2",
+        "dns" : "10.1.1.2",
         "proxy" : "proxy.pac.js"
       },
       {
@@ -46,7 +46,7 @@ export class HomePage {
         "image": "http://img.clubic.com/download/image.php?id=06697626&h=016C&w=01D4&crop=2&options=YToxOntzOjU6ImNvbG9yIjtzOjU6IndoaXRlIjt9",
         "sim" : false,
         "ip" : "127.0.0.1",
-        "dsn" : "10.1.1.2",
+        "dns" : "10.1.1.2",
         "proxy" : "proxy.pac.js"
       },
       {
@@ -58,7 +58,7 @@ export class HomePage {
         "image": "http://img1.lesnumeriques.com/produits/474/20917/Nexus_9_face-545393c21e546_450x400.jpg",
         "sim" : false,
         "ip" : "127.0.0.1",
-        "dsn" : "10.1.1.2",
+        "dns" : "10.1.1.2",
         "proxy" : "proxy.pac.js"
       },
       {
@@ -70,7 +70,7 @@ export class HomePage {
         "image": "",
         "sim" : false,
         "ip" : "127.0.0.1",
-        "dsn" : "10.1.1.2",
+        "dns" : "10.1.1.2",
         "proxy" : "125.12.57.10:3138"
       },
 
